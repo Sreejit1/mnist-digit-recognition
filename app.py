@@ -37,14 +37,6 @@ def predict():
     # Professional preprocessing
     image = preprocess_image(image)
 
-    import matplotlib.pyplot as plt
-
-    plt.figure(figsize=(3,3))
-    plt.imshow(image.reshape(28,28), cmap="gray")
-    plt.title("Image seen by CNN")
-    plt.axis("off")
-    plt.show()
-
     # Prediction
     prediction = model.predict(image, verbose=0)
 
